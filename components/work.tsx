@@ -74,7 +74,7 @@ export function AboutMe() {
     <p className="site-note">I’m now pursuing a master’s in Management of Technology at NYU Tandon and working as a Digital Accessibility Analyst at NYU IT. I’ve built a dashboard to help the American Chemical Society understand how its local sections’ activities aligned with its strategy, prototyped a semester-planning app for students, and helped build a tool that gives accessibility reviewers a clearer starting point for vendor follow-up. The part I enjoy most is figuring out what would make someone’s next decision easier, then building something they can actually use.</p>
     <div className="mt-6 max-w-[610px] border-l-2 border-[var(--blue)] pl-4">
       <h3 className="text-lg">Outside work</h3>
-      <p className="site-note">I’m a Disney girl through and through, and rafting in Yosemite is still one of my favorite travel memories. I also make 360° travel videos with my partner. My favorite part is rewatching a clip and catching something I missed the first time.</p>
+      <p className="site-note">I’m a Disney girl through and through, and rafting in Yosemite is a day I’ll never forget. I’ve rescued squirrels, kittens, and birds, and I have a golden retriever of my own.</p>
     </div>
     <ProjectLink url="https://www.linkedin.com/in/muskan-saxena25/" label="Connect on LinkedIn"/>
   </section>
