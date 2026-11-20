@@ -1,7 +1,7 @@
 import { ArrowUpRight, Award } from 'lucide-react'
 
 const featured = [
-  {id:'coursewise',type:'Product design', title:'Coursewise', text:'I built a semester-planning prototype to help students see how courses fit into their schedule. After testing the flow, I fixed a navigation issue that opened the next screen partway down the page.', link:'Try Coursewise', url:'https://delay-foil-44706164.figma.site'},
+  {id:'coursewise',type:'Product design', title:'Coursewise', text:'I built a prototype to help students discover courses and turn their choices into a semester plan.', link:'Try Coursewise', url:'https://delay-foil-44706164.figma.site'},
   {id:'beverage-market',type:'Data visualization',title:'Decoding the Beverage Market',award:'Top 5 Finalist · LibertyViz 2026',text:'I used Tableau level-of-detail calculations to define retail tiers and compare supply. The dashboard shows how budget products drive volume while premium products anchor value.',link:'Explore the Tableau dashboard',url:'https://public.tableau.com/app/profile/muskan.saxena2290/viz/MS_TableauComp/Dashboard1'},
   {id:'customer-churn-research',type:'Machine learning',title:'Customer Churn Rate Prediction using Machine Learning Techniques for E-Commerce Sector',award:'Best Paper Award · ICICC 2024',text:'I presented this research on February 16, 2024, at the 7th International Conference on Innovative Computing & Communication and received the Best Paper Award in March 2024.',link:'Read the research paper',url:'https://www.researchgate.net/publication/384932722_Customer_Churn_Rate_Prediction_Using_Machine_Learning_Techniques_for_E-Commerce_Sector'}
 ]
@@ -27,6 +27,13 @@ export function FeaturedWork() {
       <div className="category">{p.type}</div><h3 id={p.id} tabIndex={-1}>{p.title}</h3>
       {p.award&&<div className="award"><Award size={16} aria-hidden="true"/>{p.award}</div>}
       <p>{p.text}</p><ProjectLink url={p.url} label={p.link}/>
+      {p.id === 'coursewise' && (
+        <details className="mt-4 rounded-md border border-[var(--rule)] p-4">
+          <summary className="cursor-pointer text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--blue)]">What I learned from testing</summary>
+          <p>Some participants struggled to understand where to start. I clarified the introduction and reduced the bottom navigation to two tabs based on their feedback.</p>
+          <p><strong>5 of 5 returning participants</strong> completed the revised journey. They had already tried the original, so I’d test with new participants to see how the revised flow works for first-time users.</p>
+        </details>
+      )}
     </article>)}</div>
   </section>
 }
@@ -38,6 +45,14 @@ export function MoreWork() {
     </article>
     <div className="other">{more.map(p=><article key={p.id} aria-labelledby={p.id}>
       <div className="category">{p.type}</div><h3 id={p.id} tabIndex={-1}>{p.title}</h3><p>{p.text}</p>
+      {p.id === 'nyc-urban-data-intelligence' && (
+        <ol aria-label="NYC 311 data pipeline" className="mt-4 grid list-decimal gap-1 rounded-md border border-[var(--rule)] py-3 pr-3 pl-8 text-sm">
+          <li>Fetch requests from NYC Open Data</li>
+          <li>Validate and clean rows with Pandas</li>
+          <li>Store new and updated records in SQLite</li>
+          <li>Explore trends in Streamlit</li>
+        </ol>
+      )}
       {p.url&&<ProjectLink url={p.url} label={p.link}/>}
     </article>)}</div>
   </section>
@@ -45,7 +60,7 @@ export function MoreWork() {
 export function AboutMe() {
   return <section className="block" aria-labelledby="about">
     <Heading id="about" number="03" title="About me" side="Background"/>
-    <p className="site-note">I’m Muskan Saxena. I started out studying English, then moved into business operations and analytics. That path shaped how I work. I like digging into the data, asking who needs to use it, and figuring out how to make it useful to them.</p>
+    <p className="site-note">I’m Muskan Saxena. I started out studying English, then moved into business operations and analytics. Studying English taught me to pay attention to what a reader needs. I still ask that question when I build a dashboard or prototype.</p>
     <p className="site-note">I’m now pursuing a master’s in Management of Technology at NYU Tandon and working as a Digital Accessibility Analyst at NYU IT. I’ve built a dashboard to help the American Chemical Society understand how its local sections’ activities aligned with its strategy, prototyped a semester-planning app for students, and helped build a tool that gives accessibility reviewers a clearer starting point for vendor follow-up. The part I enjoy most is figuring out what would make someone’s next decision easier, then building something they can actually use.</p>
   </section>
 }
