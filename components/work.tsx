@@ -31,7 +31,16 @@ export function FeaturedWork() {
       {p.id === 'coursewise' && (
         <details className="mt-4 rounded-md border border-[var(--rule)] p-4">
           <summary className="cursor-pointer text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--blue)]">What I learned from testing</summary>
-          <p>Some participants struggled to understand where to start. I clarified the introduction and reduced the bottom navigation to two tabs based on their feedback.</p>
+          <dl className="mt-3 grid gap-3">
+            <div className="rounded bg-[#f1f3f8] p-3">
+              <dt className="text-sm font-semibold">Before</dt>
+              <dd className="mt-1 text-sm leading-relaxed">Some testers struggled to see where to start and how to move through the planning flow.</dd>
+            </div>
+            <div className="rounded bg-[#eef1fc] p-3">
+              <dt className="text-sm font-semibold">After</dt>
+              <dd className="mt-1 text-sm leading-relaxed">I clarified the introduction and simplified the bottom navigation to two tabs.</dd>
+            </div>
+          </dl>
           <p><strong>5 of 5 returning participants</strong> completed the revised journey. They had already tried the original, so I’d test with new participants to see how the revised flow works for first-time users.</p>
         </details>
       )}
@@ -63,6 +72,10 @@ export function AboutMe() {
     <Heading id="about" number="03" title="About me" side="Background"/>
     <p className="site-note">I’m Muskan Saxena. I started out studying English, then moved into business operations and analytics. Studying English taught me to pay attention to what a reader needs. I still ask that question when I build a dashboard or prototype.</p>
     <p className="site-note">I’m now pursuing a master’s in Management of Technology at NYU Tandon and working as a Digital Accessibility Analyst at NYU IT. I’ve built a dashboard to help the American Chemical Society understand how its local sections’ activities aligned with its strategy, prototyped a semester-planning app for students, and helped build a tool that gives accessibility reviewers a clearer starting point for vendor follow-up. The part I enjoy most is figuring out what would make someone’s next decision easier, then building something they can actually use.</p>
+    <div className="mt-6 max-w-[610px] border-l-2 border-[var(--blue)] pl-4">
+      <h3 className="text-lg">Outside work</h3>
+      <p className="site-note">I’m a Disney girl through and through, and rafting in Yosemite is still one of my favorite travel memories. I also make 360° travel videos with my partner. My favorite part is rewatching a clip and catching something I missed the first time.</p>
+    </div>
     <ProjectLink url="https://www.linkedin.com/in/muskan-saxena25/" label="Connect on LinkedIn"/>
   </section>
 }
