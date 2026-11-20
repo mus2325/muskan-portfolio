@@ -62,6 +62,7 @@ export function AboutMe() {
     <Heading id="about" number="03" title="About me" side="Background"/>
     <p className="site-note">I’m Muskan Saxena. I started out studying English, then moved into business operations and analytics. Studying English taught me to pay attention to what a reader needs. I still ask that question when I build a dashboard or prototype.</p>
     <p className="site-note">I’m now pursuing a master’s in Management of Technology at NYU Tandon and working as a Digital Accessibility Analyst at NYU IT. I’ve built a dashboard to help the American Chemical Society understand how its local sections’ activities aligned with its strategy, prototyped a semester-planning app for students, and helped build a tool that gives accessibility reviewers a clearer starting point for vendor follow-up. The part I enjoy most is figuring out what would make someone’s next decision easier, then building something they can actually use.</p>
+    <ProjectLink url="https://www.linkedin.com/in/muskan-saxena25/" label="Connect on LinkedIn"/>
   </section>
 }
 export function SiteNotes({sourceUrl}:{sourceUrl:string}) {
