@@ -1,4 +1,5 @@
 import { ArrowUpRight, Award } from 'lucide-react'
+import { VpatScoringDemo } from './vpat-scoring-demo'
 
 const featured = [
   {id:'coursewise',type:'Product design', title:'Coursewise', text:'I built a prototype to help students discover courses and turn their choices into a semester plan.', link:'Try Coursewise', url:'https://delay-foil-44706164.figma.site'},
@@ -41,7 +42,7 @@ export function MoreWork() {
   return <section className="block" aria-labelledby="more">
     <Heading id="more" number="02" title="More work" side={`Project index (${String(more.length + 1).padStart(2, '0')})`}/>
     <article className="vpat" aria-labelledby="vpat-analyzer"><div><div className="category">Accessibility tools</div><h3 id="vpat-analyzer" tabIndex={-1}>VPAT Analyzer</h3><p>At NYU IT, I helped build the VPAT Analyzer, a Google Sheets tool that uses AI and APIs to support reviews of vendor accessibility documentation. It applies weighted criteria to produce a documentation quality score and letter grade. Reviewers can use the breakdown to decide where to ask vendors for more evidence or clearer explanations.</p></div>
-      <div className="example"><table><caption>Illustrative example · fictional report</caption><thead><tr><th>Criterion</th><th>Weight</th><th>Score</th></tr></thead><tbody>{[['Completeness','40%','90'],['Clarity of evidence','35%','80'],['Specificity of explanations','25%','88']].map(r=><tr key={r[0]}><th>{r[0]}</th><td>{r[1]}</td><td>{r[2]}</td></tr>)}</tbody></table><div className="result">Weighted result <strong>86/100 · B</strong></div><p>This measures documentation quality. Accessibility conformance requires a separate assessment.</p></div>
+      <VpatScoringDemo/>
     </article>
     <div className="other">{more.map(p=><article key={p.id} aria-labelledby={p.id}>
       <div className="category">{p.type}</div><h3 id={p.id} tabIndex={-1}>{p.title}</h3><p>{p.text}</p>
